@@ -1,3 +1,8 @@
+[[redirects]]
+  from = "/*"
+  to = "/views/index.ejs"
+  status = 200
+
 [build]
   command = "npm install && npm run build"
   publish = "public"
