@@ -7,7 +7,7 @@
   "scripts": {
     "build":"echo 'No build steps required for Node.js project'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node indexr.js"
   },
   "author": "areeb",
   "license": "ISC",
