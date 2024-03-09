@@ -10,13 +10,13 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 // Render the index template with default values for weather and error
-app.get("/", (req, res) => {
+app.get("https://main--skyview-weatherapp.netlify.app/", (req, res) => {
   res.render("index.ejs", { weather: null, error: null });
   
 });
 
 // Handle the /weather route
-app.get("/weather", async(req, res) => {
+app.get("https://main--skyview-weatherapp.netlify.app/weather", async(req, res) => {
   // Get the city from the query parameters
   const city = req.query.city;
   const APIkey='792f070cefe929e01518cab3af05d3b5';
