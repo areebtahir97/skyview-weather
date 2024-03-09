@@ -4,7 +4,7 @@ const app = express();
 
 // Set the view engine to EJS
 app.set("view engine", "ejs");
-app.set('views', __dirname + '/views');
+
 
 // Serve the public folder as static files
 app.use(express.static("public"));
