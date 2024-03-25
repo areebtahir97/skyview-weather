@@ -1,8 +1,10 @@
 import express, { response } from "express";
 import axios from "axios";
+import env from "dotenv";
+
 const app = express();
 
-
+env.config();
 app.set("view engine", "ejs");
 
 
@@ -19,7 +21,7 @@ app.get("/", (req, res) => {
 app.get("/weather", async(req, res) => {
 
   const city = req.query.city;
-  const APIkey='792f070cefe929e01518cab3af05d3b5';
+  const APIkey=process.env.API_KEY;
   
   const url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}&units=metric`;
   let weather;
